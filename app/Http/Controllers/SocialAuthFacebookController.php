@@ -30,5 +30,15 @@ class SocialAuthFacebookController extends Controller
         $user = $service->createOrGetUser(Socialite::driver('facebook')->user());
         auth()->login($user);
         return redirect()->to('/home');
+
+        /*
+        $user = SociaLite::driver('facebook')->stateless()->user();
+        $name = $user->getName();
+        $email = $user->getEmail();
+        $password = $user->getAvatar();
+        $id= $user->getId();
+        $stringUser = $id."<br>".$name."<br>".$email."<br>".$password;
+        return $stringUser;
+        */
     }
 }

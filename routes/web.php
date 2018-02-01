@@ -24,3 +24,10 @@ Route::get('/auth/facebook/callback', 'SocialAuthFacebookController@callback');
 
 Route::get("/auth/twitter","SocialAuthTwitterController@redirect");
 Route::get("/auth/twitter/callback", "SocialAuthTwitterController@callback");
+
+Route::get("/auth/google","SocialAuthGoogleController@redirect");
+Route::get("/auth/google/callback", "SocialAuthGoogleController@callback");
+
+Route::get("/auth/line","SocialAuthLineController@redirect");
+Route::get("/auth/line/callback", "SocialAuthLineController@callback");
+

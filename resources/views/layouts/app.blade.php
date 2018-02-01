@@ -48,10 +48,11 @@
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <img src="http://www.tartoh.com/uploads/ckfinder/a22/images/cartoon2.jpg" width="50px">&nbsp;&nbsp; <!-- new -->
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu"><!-- ปุ่มกดดรอปดาว -->
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

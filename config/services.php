@@ -47,4 +47,16 @@ return [
         'redirect' => 'http://localhost:8000/auth/twitter/callback',
     ],
 
+    'google' => [
+        'client_id' => '448085974024-ls10opq2ab5bdj2gbbc5igq9evlffen9.apps.googleusercontent.com',
+        'client_secret' => 'Pu70113YYPwyqii-NWtLvPpz',
+        'redirect' => 'http://localhost:8000/auth/google/callback',
+    ],
+
+    'line' => [
+        'client_id' => '1560260457',
+        'client_secret' => '7c61356aaeeabeff3718d5bbf5d22bca',
+        'redirect' => 'http://localhost:8000/auth/line/callback',
+    ],
+
 ];

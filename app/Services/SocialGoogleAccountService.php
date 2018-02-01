@@ -5,11 +5,11 @@ use App\SocialAccount;
 use App\User;
 use Laravel\Socialite\Contracts\User as ProviderUser;
 
-class SocialTwitterAccountService
+class SocialGoogleAccountService
 {
     public function createOrGetUser(ProviderUser $providerUser)
     {
-        $account = SocialAccount::whereProvider('twitter')
+        $account = SocialAccount::whereProvider('google')
             ->whereProviderUserId($providerUser->getId())
             ->first();
 
@@ -19,8 +19,7 @@ class SocialTwitterAccountService
 
             $account = new SocialAccount([
                 'provider_user_id' => $providerUser->getId(),
-                'provider' => 'twitter',
-                'avatar' => $providerUser->getAvatar()
+                'provider' => 'google'
             ]);
 
             $user = User::whereEmail($providerUser->getEmail())->first();
